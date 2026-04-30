@@ -1,0 +1,30 @@
+{
+  "name": "insighta",
+  "version": "1.0.0",
+  "description": "CLI for Insighta Labs \u2014 query and manage profile data from your terminal",
+  "main": "dist/index.js",
+  "bin": {
+    "insighta": "./dist/index.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "build": "node api.js && tsc",
+    "dev": "node api.js && ts-node src/index.ts",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'No tests yet' && exit 0",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "open": "^8.4.2",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
